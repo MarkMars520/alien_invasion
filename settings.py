@@ -8,7 +8,7 @@ class Settings():
 
         # 子弹设置
         self.bullet_speed_factor = 1  # 子弹飞行速度
-        self.bullet_width = 3 #  3像素
+        self.bullet_width = 5 #  3像素
         self.bullet_height = 15 # 15 像素高
         self.bullet_color = 60 , 60, 60
         self.bullets_allowed =3
