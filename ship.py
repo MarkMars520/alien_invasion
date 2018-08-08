@@ -1,3 +1,4 @@
+#coding=gbk
 import pygame
 
 class Ship():
@@ -8,7 +9,9 @@ class Ship():
         self.image = pygame.image.load('images/ship.bmp')
         self.rect = self.image.get_rect()   # rect 是 image的dimension
         self.screen_rect = screen.get_rect() # screen_rect 是屏幕的dimension
-        self.center = float(self.rect.centerx)  # 3
+        ''' 如果这里是self.rect.centerx，那么飞船就在最左边。如果是self.screen_rect.centerx
+        那么飞船就在中间'''
+        self.center = float(self.screen_rect.centerx)  
         self.y = float(self.screen_rect.bottom - self.rect.bottom)
 
         self.rect.centerx = self.screen_rect.centerx
